@@ -32,6 +32,8 @@ body {
     justify-content: space-evenly;
     gap: 80px;
     height: 100vh;
+    max-height: 1024px;
+    max-width: 1440px;
     padding: 3% 5%;
     margin: 0 auto;
 }
@@ -130,6 +132,7 @@ body {
     font-weight: bold;
     text-align: center;
     margin-top: 32px;
+    width: 100%;
 }
 
 .container__result__parag {
@@ -137,6 +140,7 @@ body {
     font-size: 1rem;
     color: var(--color-text-normal);
     text-align: center;
+    width: 100%;
 }
 
 .container__result__textarea {
@@ -196,6 +200,7 @@ body {
 @media (max-width: 576px) {
     .container {
         height: 933px;
+        min-width: 300px;
     }
 
     .container__input__buttons {
