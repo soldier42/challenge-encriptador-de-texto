@@ -7,13 +7,13 @@ function getTextoInput() {
 function setResultado(msg) {
     let boxResultado = document.querySelector('.container__result');
     let textAreaResultado = criaTextArea(msg, 'container__result__textarea');
-    let botao = criaBotao('Copiar', 'container__result__botao');
-
+    let botao = criaBotao('Copiar', 'container__result__copy-button');
+    
     boxResultado.innerHTML = '';
     boxResultado.style.justifyContent = 'space-between';
-
+    
     botao.setAttribute('onclick', 'copiar()');
-
+    
     boxResultado.appendChild(textAreaResultado);
     boxResultado.appendChild(botao);
 }
@@ -32,6 +32,37 @@ function criaBotao(msg, classe) {
     botao.setAttribute('class', classe);
     botao.innerHTML = msg.trim();
     return botao;
+}
+
+function setButtonMessage(botao, msg) {
+     botao.innerHTML = msg; 
+}
+
+function disableButton(botao) {
+    botao.setAttribute('disabled', true);
+}
+
+function activeButton(botao) {
+    botao.removeAttribute('disabled');
+}
+
+function copiar() {
+    let texto = document.querySelector('.container__result__textarea').innerHTML;
+    navigator.clipboard.writeText(texto);
+
+    let botao = document.querySelector('.container__result__copy-button');
+
+    botao.style.backgroundColor = 'var(--color-button-white-hover)';
+    botao.style.transition = 'none';
+    setButtonMessage(botao, 'Copiado!');
+    disableButton(botao);
+
+    setTimeout(() => {
+        setButtonMessage(botao, 'Copiar');
+        activeButton(botao);
+        botao.style.background = 'none';
+        botao.style.transition = 'background-color 0.5s';
+    }, 2000);
 }
 
 function criptografarTexto() {
@@ -82,11 +113,3 @@ function descriptografarTexto() {
 }
 
 
-function copiar() {
-    let texto = document.querySelector('.container__result__textarea').innerHTML;
-    navigator.clipboard.writeText(texto);
-
-    let botao = document.querySelector('.container__result__botao');
-    botao.innerHTML = 'Copiado!';
-    
-}

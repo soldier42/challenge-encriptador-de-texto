@@ -15,7 +15,7 @@
     --color-button-copy-border: #0A3871;
     --color-button-copy-text: #0A3871;
     --color-button-white-hover: #D8DFE8;
-    --color-button-darkblue-hover: #0a3871d8;
+    --color-button-darkblue-hover: #082e5c;
     --color-text-warning: #495057;
     --color-text-result: #495057;
     --color-text-big: #343A40;
@@ -86,6 +86,7 @@ body {
     border-radius: 24px;
     padding: 24px;
     cursor: pointer;
+    outline: none;
 }
 
 .container__input__buttons__crip:hover {
@@ -102,6 +103,7 @@ body {
     border-radius: 24px;
     padding: 24px;
     cursor: pointer;
+    outline: none;
 }
 
 .container__input__buttons__descrip:hover{
@@ -123,7 +125,7 @@ body {
     width: 100%
 }
 
-.container__result__big-parag {
+.container__result__title {
     color: var(--color-text-big);
     font-size: 1.5rem;  
     font-weight: bold;
@@ -132,7 +134,7 @@ body {
     width: 100%;
 }
 
-.container__result__parag {
+.container__result__paragraph {
     margin-top: 16px;
     font-size: 1rem;
     color: var(--color-text-normal);
@@ -150,7 +152,7 @@ body {
     background: transparent;
 }
 
-.container__result__botao {
+.container__result__copy-button {
     font-size: 1rem;
     background: none;
     border: 1px solid var(--color-button-copy-border);
@@ -160,15 +162,16 @@ body {
     width: 100%;
     cursor: pointer;
     margin-top: 32px;
+    outline: none;
 }
 
-.container__result__botao:hover {
+.container__result__copy-button:hover {
     background-color: var(--color-button-white-hover);
 }
 
 @media (max-width: 1274px){
     .container {
-        height: 1384px;
+        min-height: 984px;
         flex-direction: column;
         justify-content: space-between;
         padding-top: 0;
@@ -202,11 +205,19 @@ body {
 
 @media (max-width: 576px) {
     .container {
-        height: 933px;
+        min-height: 933px;
         min-width: 300px;
+    }
+
+    .container__input {
+        height: 60%;
     }
 
     .container__input__buttons {
         flex-direction: column;
+    }
+
+    .container__result {
+        height: 40%;
     }
 }
