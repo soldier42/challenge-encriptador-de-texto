@@ -8,11 +8,10 @@
 
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Requisitos](#requisitos)
-* [Funcionalidades](#funcionalidades)
-* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Funcionalidade](#funcionalidade)
 * [Demonstração da Aplicação](#demonstração-da-aplicação)
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Acesso ao Projeto](#acesso-ao-projeto)
-
 
 # Descrição do Projeto
 Projeto em desenvolvimento do **Challenge Alura ONE** que tem como objetivo a implementação de um *codificador e decodificador de texto*.
@@ -44,10 +43,10 @@ Para a decodificação do texto é feito o processo inverso.
 # Demonstração da Aplicação
 
 ## Criptografia
-<img style="display: block; margin: auto;" src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="390" height="240" />
+<img style="display: block; margin: auto;" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhtMWl3YnNrYzFsaDRwenY1ZGM4d3FoNGdlemthY3E2c3M5bGE0cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/szwFxapFN7eOVIO77U/giphy.gif"/>
 
 ## Descriptografia
-<img style="display: block; margin: auto;" src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="390" height="240" />
+<img style="display: block; margin: auto;" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWxueHIzMmFhaXg2cW05N3U1b2Rqd2N6ZzRrNXkyeDB0djVwMTI4cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/579MntGANTU72xmNZB/giphy.gif"/>
 
 # Tecnologias Utilizadas
 
@@ -63,4 +62,3 @@ Para a decodificação do texto é feito o processo inverso.
 Para o acesso e uso da aplicação:
 
 - https://soldier42.github.io/challenge-decodificador-de-texto/index.html
-
