@@ -193,7 +193,6 @@ body {
 
 .cabecalho__texto {
     color: #0A3871;
-
     text-align: center;
 }
 
@@ -202,7 +201,6 @@ body {
     color: #0A3871;
     font-weight: 600;
     padding: 3px;
-    border-radius: 10px;
 }
 
 .cabecalho__links__one:hover {
