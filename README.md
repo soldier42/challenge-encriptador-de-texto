@@ -14,7 +14,7 @@
 * [Acesso ao Projeto](#acesso-ao-projeto)
 
 # Descrição do Projeto
-Este projeto é a implementação de um *codificador e decodificador de texto* e tem como principal objeto colocar em prática todos os conhecimentos adquiridos durante a segunda fase do programa **Oracle ONE** em parceria com a **Alura**.
+Este projeto é a implementação de um *codificador e decodificador de texto* e tem como principal objetivo colocar em prática todos os conhecimentos adquiridos durante a segunda fase do programa **Oracle ONE** em parceria com a **Alura**.
 
 # Requisitos
 
