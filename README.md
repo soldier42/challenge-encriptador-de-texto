@@ -1,7 +1,7 @@
 <h1 align="center">Challenge Encriptador de Texto</h1>
 
 <p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=COMPLETO&color=GREEN&style=for-the-badge"/>
 </p>
 
 # Índice 
@@ -14,15 +14,13 @@
 * [Acesso ao Projeto](#acesso-ao-projeto)
 
 # Descrição do Projeto
-Projeto em desenvolvimento do **Challenge Alura ONE** que tem como objetivo a implementação de um *codificador e decodificador de texto*.
+Este projeto é a implementação de um *codificador e decodificador de texto* e tem como principal objeto colocar em prática todos os conhecimentos adquiridos durante a segunda fase do programa **Oracle ONE** em parceria com a **Alura**.
 
 # Requisitos
 
-- Deve funcionar apenas com letras minúsculas
+- Criptografia e descriptografia funcionam **APENAS** com **LETRAS MINÚSCULAS**
 
-- Não devem ser utilizados letras com acentos nem caracteres especiais
-
-- Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
+- **NÃO** devem ser utilizados **LETRAS COM ACENTOS** nem **CARACTERES ESPECIAIS**
 
 
 # Funcionalidade
@@ -61,4 +59,4 @@ Para a decodificação do texto é feito o processo inverso.
 # Acesso ao Projeto
 Para o acesso e uso da aplicação:
 
-- https://soldier42.github.io/challenge-decodificador-de-texto/index.html
+- https://soldier42.github.io/challenge-encriptador-de-texto/index.html
