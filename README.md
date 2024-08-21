@@ -41,10 +41,10 @@ Para a decodificação do texto é feito o processo inverso.
 # Demonstração da Aplicação
 
 ## Criptografia
-<img style="display: block; margin: auto;" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhtMWl3YnNrYzFsaDRwenY1ZGM4d3FoNGdlemthY3E2c3M5bGE0cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/szwFxapFN7eOVIO77U/giphy.gif"/>
+<img style="display: block; margin: auto;" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjhkOThtZHNrajNkM2hmb2o5eDVkb29rZzI3cGpuaWZnNW9mcTgzcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IXWnMd5dhqeLFtjdOp/giphy.gif"/>
 
 ## Descriptografia
-<img style="display: block; margin: auto;" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWxueHIzMmFhaXg2cW05N3U1b2Rqd2N6ZzRrNXkyeDB0djVwMTI4cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/579MntGANTU72xmNZB/giphy.gif"/>
+<img style="display: block; margin: auto;" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHAyNGMwaDN5MjUxcDNwbWx5eHJkbXNpY3kwMTNiYzJuZXNsMTViayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vM5uqxnt4oyAtxsHZW/giphy.gif"/>
 
 # Tecnologias Utilizadas
 

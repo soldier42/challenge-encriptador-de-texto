@@ -4,31 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/switch-button-style.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
-    <title>Decodificador</title>
+    <title>Codificador de Texto</title>
 </head>
 <body>
     <header></header>
     <main class="container"> 
-        <section class="container__logo">
-            <a href="index.html"><img src="assets/logo-alura.svg" alt="miniatura do logo da alura"></a>
-        </section>
-      
-        <section class="container__input">
-            <textarea class="container__input__textarea" name="inputTexto" placeholder="Digite seu texto"></textarea>
-            <div class="container__input__warning">
-                <img class="container__input__warning__image" src="assets/alert.svg" alt="imagem em miniatura de um alerta">
-                <p>Apenas letras minúsculas e sem acento.</p>
+        <section class="container__input-logo">
+            <div class="container__input-logo__logo">
+                <a href="index.html"><img id="logo-alura" src="assets/logo-alura.svg" alt="miniatura do logo da alura" width="31px" height="48px"></a>
+                
+                <span class="dark-mode-botao">
+                    <img id="imagem-sol" src="assets/sol.svg" alt="imagem em miniatura de um sol" width="25px" height="25px">
+
+                    <label class="switch">
+                        <input id="check-button" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <img id="imagem-lua" src="assets/lua.svg" alt="imagem em miniatura de um lua" width="25px" height="25px">
+                </span>
+
             </div>
+
+            <div class="container__input-logo__input">
+                <textarea class="container__input__textarea" name="inputTexto" placeholder="Digite seu texto"></textarea>
+                <div class="container__input__warning">
+                    <img class="container__input__warning__image" src="assets/alert.svg" alt="imagem em miniatura de um alerta">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
             
-            <div class="container__input__buttons">
-                <button class="container__input__buttons__crip" onclick="criptografarTexto()">Criptografar</button>
-                <button class="container__input__buttons__descrip" onclick="descriptografarTexto()">Descriptografar</button>
+                <div class="container__input__buttons">
+                    <button class="container__input__buttons__crip" onclick="criptografarTexto()">Criptografar</button>
+                    <button class="container__input__buttons__descrip" onclick="descriptografarTexto()">Descriptografar</button>
+                </div>
             </div>
         </section>
 
         <section class="container__result">
-            <img class="container__result__image" src="assets/placeholder-image.svg" alt="desenho de um menino segurando uma lupa">
+            <img id="placeholder" class="container__result__image" src="assets/placeholder-image.svg" alt="desenho de um menino segurando uma lupa">
             <h2 class="container__result__title">Nenhuma mensagem encontrada</h2>
             <p class="container__result__paragraph">Digite um texto que você deseja criptografar ou descriptografar.</p>
         </section>
@@ -38,11 +53,11 @@
 
     <footer class="cabecalho">
         <div class="cabecalho__links">
-            <a target="_blank" href="https://github.com/soldier42"><img src="assets/github-logo.svg" alt="logo do github" width="30px" height="30px"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/dev-gabriel-cardoso/"><img src="assets/logo-linkedin.svg" alt="logo do linkedin" width="30px" height="30px"></a>
+            <a target="_blank" href="https://github.com/soldier42"><img id="logo-github" src="assets/logo-github.svg" alt="logo do github" width="30px" height="30px"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/dev-gabriel-cardoso/"><img id="logo-linkedin" src="assets/logo-linkedin.svg" alt="logo do linkedin" width="30px" height="30px"></a>
         </div>
 
-        <p class="cabecalho__texto">Site feito por Gabriel Cardoso para o programa <a class="cabecalho__links__one" target="_blank" href="https://www.oracle.com/br/education/oracle-next-education/">Oracle One</a></p>
+        <p class="cabecalho__texto">Site desenvolvido por Gabriel Cardoso para o programa<a class="cabecalho__links__one" target="_blank" href="https://www.oracle.com/br/education/oracle-next-education/">Oracle One</a></p>
     </footer>
 </body>
 </html>

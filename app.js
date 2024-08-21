@@ -5,6 +5,11 @@ function getTextoInput() {
 }
 
 function setResultado(msg) {
+    if (getTextoInput() === '') {
+        alert('A caixa de texto não pode estar vazia.');
+        return;
+    }
+
     let boxResultado = document.querySelector('.container__result');
     let textAreaResultado = criaTextArea(msg, 'container__result__textarea');
     let botao = criaBotao('Copiar', 'container__result__copy-button');
@@ -52,7 +57,7 @@ function copiar() {
 
     let botao = document.querySelector('.container__result__copy-button');
 
-    botao.style.backgroundColor = 'var(--color-button-white-hover)'; 
+    botao.style.backgroundColor = 'var(--color-copyButton-hover)'; 
     setButtonMessage(botao, 'Copiado');
     disableButton(botao);
 
@@ -93,11 +98,6 @@ function criptografarTexto() {
         textoCriptografado += ' '; // ao final do loop das vogais é adicionado um espaço para separar a proxima palavra
     }
 
-    if (getTextoInput() === '') {
-        alert('A caixa de texto não pode estar vazia.')
-        return;
-    }
-
     setResultado(textoCriptografado);
 }
 
@@ -111,12 +111,43 @@ function descriptografarTexto() {
     textoDescriptografado = textoDescriptografado.replace(/ober/g, 'o');
     textoDescriptografado = textoDescriptografado.replace(/ufat/g, 'u');
 
-    if (getTextoInput() === '') {
-        alert('A caixa de texto não pode estar vazia.')
-        return;
-    }
-
     setResultado(textoDescriptografado);
 }
 
+document.querySelector('#check-button').addEventListener('change', function() {
+    let html = document.querySelector('html');
+    if (this.checked) {
+        document.querySelector('#logo-alura').setAttribute('src', 'assets/logo-alura-cinza.svg');
+        document.querySelector('#logo-github').setAttribute('src', 'assets/logo-github-cinza.svg');
+        document.querySelector('#logo-linkedin').setAttribute('src', 'assets/logo-linkedin-cinza.svg');
+        document.querySelector('#imagem-sol').setAttribute('src', 'assets/sol-cinza.svg');
+        document.querySelector('#imagem-lua').setAttribute('src', 'assets/lua-cinza.svg');
+        
+        html.classList.toggle('dark-mode');
+
+        try {
+            document.querySelector('#placeholder').setAttribute('src', 'assets/placeholder-image-cinza.svg');
+        } catch {
+            null;
+        }
+        
+    } else {
+        document.querySelector('#logo-alura').setAttribute('src', 'assets/logo-alura.svg');
+        document.querySelector('#logo-github').setAttribute('src', 'assets/logo-github.svg');
+        document.querySelector('#logo-linkedin').setAttribute('src', 'assets/logo-linkedin.svg');
+        document.querySelector('#imagem-sol').setAttribute('src', 'assets/sol.svg');
+        document.querySelector('#imagem-lua').setAttribute('src', 'assets/lua.svg');
+
+        html.classList.toggle('dark-mode');
+
+        try {
+            document.querySelector('#placeholder').setAttribute('src', 'assets/placeholder-image.svg');
+        } catch {
+            null;
+        }
+    }
+    
+
+
+});
 

@@ -15,16 +15,47 @@
     --color-button-copy-border: #0A3871;
     --color-button-copy-text: #0A3871;
     --color-button-white-hover: #D8DFE8;
+    --color-copyButton-hover: #D8DFE8;
     --color-button-darkblue-hover: #082e5c;
     --color-text-warning: #495057;
     --color-text-result: #495057;
     --color-text-big: #343A40;
     --color-text-normal: #495057;
+    --cor-texto-cabecalho: #0A3871;
+    --cor-borda-cabecalho: #0A3871;
+}
+
+.dark-mode:root {
+    --color-background: #222831;
+    --color-box-result: #CCCCCC; 
+    --color-texto-input: #CCCCCC;
+    --color-button-crip: #CCCCCC;
+    --color-button-crip-text: #222831;
+    --color-button-descrip-text: #CCCCCC;
+    --color-button-descrip-border: #CCCCCC;
+    --color-button-copy-border: #495057;
+    --color-button-copy-text: #222831;
+    --color-copyButton-hover: #b3b3b3;
+    --color-button-white-hover: #31363F;
+    --color-button-darkblue-hover: #b3b3b3;
+    --color-text-warning: #495057;
+    --color-text-result: #495057;
+    --color-text-big: #343A40;
+    --color-text-normal: #495057;
+    --cor-texto-cabecalho: #CCCCCC;
+    --cor-borda-cabecalho: #CCCCCC;
+}
+
+.dark-mode-botao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--color-background);
+    transition: background-color 0.5s;
 }
 
 .container {
@@ -40,15 +71,30 @@ body {
     margin: 0 auto;
 }
 
-.container__input {
+.container__input-logo { 
     display: flex;
     flex-direction: column;
+    gap: 60px;
     width: 70%;
+}
+
+.container__input-logo__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container__input-logo__input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .container__input__textarea {
     height: 82%;
-    padding-top: 80px;
+    padding-left: 112px;
     font-size: 2rem;
     background: none;
     color: var(--color-texto-input);
@@ -91,6 +137,7 @@ body {
     padding: 24px;
     cursor: pointer;
     outline: none;
+    transition: background-color 0.5s;
 }
 
 .container__input__buttons__crip:hover {
@@ -108,6 +155,7 @@ body {
     padding: 24px;
     cursor: pointer;
     outline: none;
+    transition: background-color 0.5s;
 }
 
 .container__input__buttons__descrip:hover{
@@ -124,6 +172,7 @@ body {
     border-radius: 32px;
     width: 30%;
     box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.080);
+    transition: background-color 0.5s;
 }
 
 .container__result__image {
@@ -171,7 +220,7 @@ body {
 }
 
 .container__result__copy-button:hover {
-    background-color: var(--color-button-white-hover);
+    background-color: var(--color-copyButton-hover);
 }
 
 .cabecalho {
@@ -180,8 +229,8 @@ body {
     align-items: center;
     width: 60%;
     margin: 0 auto;
-    gap: 10px;
-    border-top: 1px solid #0A3871;
+    gap: 15px;
+    border-top: 1px solid var(--cor-borda-cabecalho);
     padding-top: 20px;
     padding-bottom: 15px;
 }
@@ -192,13 +241,13 @@ body {
 }
 
 .cabecalho__texto {
-    color: #0A3871;
+    color: var(--cor-texto-cabecalho);
     text-align: center;
 }
 
 .cabecalho__links__one {
     text-decoration: none;
-    color: #0A3871;
+    color: var(--cor-texto-cabecalho);
     font-weight: 600;
     padding: 3px;
 }
@@ -207,8 +256,8 @@ body {
     text-decoration: underline;
 }
 
-
 @media (max-width: 1274px){
+    
     .container {
         min-height: 984px;
         flex-direction: column;
@@ -216,24 +265,24 @@ body {
         padding-top: 0;
         gap: 0;
     }
+    
+    .container__input-logo {
+        width: 100%;
+        height: 75%;
+        gap: 100px;
+    }
 
-    .container__logo {
+    .container__input-logo__logo {
         margin-top: 74px;
     }
     
-    .container__input {
-        width: 100%;
-        height: 55%;
-    }
-
     .container__input__textarea {
-        margin-top: 40px;
-        padding-top: 40px;
+        padding-left: 0;
     }
 
     .container__result {
         width: 100%;
-        height: 45%;
+        height: 25%;
         margin-top: 32px;
     }
 
@@ -252,8 +301,8 @@ body {
         min-width: 300px;
     }
 
-    .container__input {
-        height: 60%;
+    .container__input-logo__input {
+        height: 70%;
     }
 
     .container__input__buttons {
@@ -261,7 +310,7 @@ body {
     }
 
     .container__result {
-        height: 40%;
+        height: 30%;
     }
 
     .cabecalho__texto {
