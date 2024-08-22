@@ -6,13 +6,30 @@ function getTextoInput() {
 
 function setResultado(msg) {
     if (getTextoInput() === '') {
-        alert('A caixa de texto não pode estar vazia.');
+        let botaoCrip = document.querySelector('.container__input__buttons__crip');
+        let botaoDescrip = document.querySelector('.container__input__buttons__descrip');
+        let inputAlert = document.querySelector('#input-alert');
+        
+        inputAlert.setAttribute('class', 'input-alert-visible');
+        disableButton(botaoCrip);
+        disableButton(botaoDescrip);
+        
+        setTimeout(() => {
+            inputAlert.setAttribute('class', 'input-alert-hidden');
+            activeButton(botaoCrip);
+            activeButton(botaoDescrip);
+        }, 2300);
+
         return;
     }
 
     let boxResultado = document.querySelector('.container__result');
+
     let textAreaResultado = criaTextArea(msg, 'container__result__textarea');
     let botao = criaBotao('Copiar', 'container__result__copy-button');
+    let alertResult = criaParagraph('Texto Copiado!', 'copy-alert-text');
+    let imagem = criaImg('assets/check-icon.svg', 'botao de check', '25px', '25px');
+    let div = criaDiv('copy-alert-hidden', imagem, alertResult);
     
     boxResultado.innerHTML = '';
     boxResultado.style.justifyContent = 'space-between';
@@ -20,7 +37,36 @@ function setResultado(msg) {
     botao.setAttribute('onclick', 'copiar()');
     
     boxResultado.appendChild(textAreaResultado);
+    boxResultado.appendChild(div);
     boxResultado.appendChild(botao);
+}
+
+function criaDiv(classe, elem1, elem2){
+    let div = document.createElement('div');
+    div.setAttribute('class', classe);
+    div.appendChild(elem1);
+    div.appendChild(elem2);
+
+    return div;
+}
+
+function criaImg(path, descricao, altura, largura) {
+    let imagem = document.createElement('img');
+    imagem.setAttribute('src', path);
+    imagem.setAttribute('alt', descricao);
+    imagem.setAttribute('heigth', altura);
+    imagem.setAttribute('width', largura);
+
+    return imagem;
+}
+
+function criaParagraph(msg, classe) {
+    let paragrafo = document.createElement('p');
+    paragrafo.innerHTML = msg;
+    paragrafo.classList.add(classe);
+
+    return paragrafo;
+
 }
 
 function criaTextArea(msg, classe) {
@@ -55,18 +101,17 @@ function copiar() {
     let texto = document.querySelector('.container__result__textarea').innerHTML;
     navigator.clipboard.writeText(texto);
 
-    let botao = document.querySelector('.container__result__copy-button');
-
-    botao.style.backgroundColor = 'var(--color-copyButton-hover)'; 
-    setButtonMessage(botao, 'Copiado');
-    disableButton(botao);
+    let copyButton = document.querySelector('.container__result__copy-button')
+    let element = document.querySelector('.copy-alert-hidden');
+    
+    element.setAttribute('class', 'copy-alert-visible');
+    disableButton(copyButton);
 
     setTimeout(() => {
-        setButtonMessage(botao, 'Copiar');
-        activeButton(botao)
-        botao.style.background = '';
-        botao.style.transition = 'background-color 0.2s';
-    }, 2000);
+        element.setAttribute('class', 'copy-alert-hidden');
+        activeButton(copyButton);
+    }, 2300);
+
 }
 
 function criptografarTexto() {
@@ -146,8 +191,5 @@ document.querySelector('#check-button').addEventListener('change', function() {
             null;
         }
     }
-    
-
-
 });
 

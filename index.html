@@ -14,7 +14,7 @@
         <section class="container__input-logo">
             <div class="container__input-logo__logo">
                 <a href="index.html"><img id="logo-alura" src="assets/logo-alura.svg" alt="miniatura do logo da alura" width="31px" height="48px"></a>
-                
+    
                 <span class="dark-mode-botao">
                     <img id="imagem-sol" src="assets/sol.svg" alt="imagem em miniatura de um sol" width="25px" height="25px">
 
@@ -25,11 +25,16 @@
 
                     <img id="imagem-lua" src="assets/lua.svg" alt="imagem em miniatura de um lua" width="25px" height="25px">
                 </span>
-
             </div>
 
             <div class="container__input-logo__input">
                 <textarea class="container__input__textarea" name="inputTexto" placeholder="Digite seu texto"></textarea>
+
+                <div id="input-alert" class="input-alert-hidden">
+                    <img src="assets/warning-icon.svg" alt="icone com uma traço de exclamação dentro de um circulo" width="25px">
+                    <p>A caixa de texto está vazia!</p>
+                </div>
+
                 <div class="container__input__warning">
                     <img class="container__input__warning__image" src="assets/alert.svg" alt="imagem em miniatura de um alerta">
                     <p>Apenas letras minúsculas e sem acento.</p>
