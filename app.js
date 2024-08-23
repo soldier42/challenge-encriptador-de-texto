@@ -5,7 +5,7 @@ function getTextoInput() {
 }
 
 function setResultado(msg) {
-    if (getTextoInput() === '') {
+    if (msg === '') {
         let botaoCrip = document.querySelector('.container__input__buttons__crip');
         let botaoDescrip = document.querySelector('.container__input__buttons__descrip');
         let inputAlert = document.querySelector('#input-alert');
@@ -66,7 +66,6 @@ function criaParagraph(msg, classe) {
     paragrafo.classList.add(classe);
 
     return paragrafo;
-
 }
 
 function criaTextArea(msg, classe) {
@@ -115,46 +114,53 @@ function copiar() {
 }
 
 function criptografarTexto() {
-    let textoNormal = getTextoInput();
+    let textoNormal = getTextoInput().toLowerCase().trim();
     let textoCriptografado = '';
 
-    for(let palavra of textoNormal.split(' ')) { // loop usado para percorrer todas as palavras da frase separadamente
-        for(let char of palavra) {  // loop usado para percorrer e criptografar todos as vogais contidas na palavra
-            switch (char) {
-                case 'a':
-                    textoCriptografado += 'ai';
-                    break;
-                case 'e':
-                    textoCriptografado += 'enter';
-                    break;
-                case 'i':
-                    textoCriptografado += 'imes';
-                    break;
-                case 'o':
-                    textoCriptografado += 'ober';
-                    break;
-                case 'u':
-                    textoCriptografado += 'ufat';
-                    break;
-                default:
-                    textoCriptografado += char;
+    if (textoNormal !== '') {
+        for(let palavra of textoNormal.split(' ')) { // loop usado para percorrer todas as palavras da frase separadamente
+            for(let char of palavra) {  // loop usado para percorrer e criptografar todos as vogais contidas na palavra
+                switch (char) {
+                    case 'a':
+                        textoCriptografado += 'ai';
+                        break;
+                    case 'e':
+                        textoCriptografado += 'enter';
+                        break;
+                    case 'i':
+                        textoCriptografado += 'imes';
+                        break;
+                    case 'o':
+                        textoCriptografado += 'ober';
+                        break;
+                    case 'u':
+                        textoCriptografado += 'ufat';
+                        break;
+                    default:
+                        textoCriptografado += char;
+                }
             }
+            textoCriptografado += ' '; // ao final do loop das vogais é adicionado um espaço para separar a proxima palavra
         }
-        textoCriptografado += ' '; // ao final do loop das vogais é adicionado um espaço para separar a proxima palavra
     }
+
+    
+
 
     setResultado(textoCriptografado);
 }
 
 function descriptografarTexto() {
-    let textoDescriptografado = getTextoInput();
+    let textoDescriptografado = getTextoInput().toLowerCase().trim();
 
-    // utilizando expressoes regulares, conseguimos substituir todas as ocorrencias que aparecem na frase
-    textoDescriptografado = textoDescriptografado.replace(/ai/g, 'a');
-    textoDescriptografado = textoDescriptografado.replace(/enter/g, 'e');
-    textoDescriptografado = textoDescriptografado.replace(/imes/g, 'i');
-    textoDescriptografado = textoDescriptografado.replace(/ober/g, 'o');
-    textoDescriptografado = textoDescriptografado.replace(/ufat/g, 'u');
+    if (textoDescriptografado !== '') {
+        // utilizando expressoes regulares, conseguimos substituir todas as ocorrencias que aparecem na frase
+        textoDescriptografado = textoDescriptografado.replace(/ai/g, 'a');
+        textoDescriptografado = textoDescriptografado.replace(/enter/g, 'e');
+        textoDescriptografado = textoDescriptografado.replace(/imes/g, 'i');
+        textoDescriptografado = textoDescriptografado.replace(/ober/g, 'o');
+        textoDescriptografado = textoDescriptografado.replace(/ufat/g, 'u');
+    }
 
     setResultado(textoDescriptografado);
 }
